@@ -8,7 +8,7 @@ Este proyecto es un Sistema de Gestión de Fincas desarrollado para AgroData Sol
 
 * Clone the repository:
 
-git clone : 
+git clone : https://github.com/kate1560/AgroData.git
 cd AgroData-Farms
 
 
@@ -17,6 +17,7 @@ cd AgroData-Farms
 npm install
 
 ## Relation Model 
+![agrodata_relational_model](https://github.com/user-attachments/assets/aacff04c-5ee8-4dd5-ae72-725e63e1f502)
 
 
 ## Set up the database:
@@ -99,4 +100,5 @@ The dashboard shows total farms and dynamically updates the table.
 Developer Information
 * Name: Kateryn Martinez
 * Clan: Malecon
+
 * Email: katemartinez1507@gmail.com
