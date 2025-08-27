@@ -9,7 +9,6 @@ Este proyecto es un Sistema de Gestión de Fincas desarrollado para AgroData Sol
 * Clone the repository:
 
 git clone : https://github.com/kate1560/AgroData.git
-cd AgroData-Farms
 
 
 * Install dependencies:
@@ -102,3 +101,4 @@ Developer Information
 * Clan: Malecon
 
 * Email: katemartinez1507@gmail.com
+
