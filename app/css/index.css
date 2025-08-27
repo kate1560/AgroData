@@ -1,0 +1,234 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente principal */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5afe0, #c3f8f8, #e5c1fd);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: #555;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff; 
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #9c75e6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Secciones */
+section {
+    margin-bottom: 40px;
+}
+
+/* Formulario elegante pastel */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    background: #b5dbf7;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(161,127,224,0.1);
+    transition: 0.3s;
+}
+
+form:hover {
+    transform: translateY(-3px);
+    box-shadow: inset 0 0 20px rgba(161,127,224,0.15);
+}
+
+form input {
+    padding: 12px 15px;
+    border: 2px solid #cbb5f4;
+    border-radius: 12px;
+    flex: 1 1 200px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #a17fe0;
+    box-shadow: 0 0 8px rgba(161,127,224,0.3);
+}
+
+form button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #a17fe0, #d3b8f4);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1 1 100%;
+    max-width: 200px;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #d3b8f4, #a17fe0);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(161,127,224,0.25);
+}
+
+/* Contenedor de la tabla para scroll horizontal */
+#list-section {
+    overflow-x: auto;
+}
+
+/* Tabla pastel y organizada */
+#list-section farm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    min-width: 600px; /* ancho mínimo para no romper diseño */
+}
+
+#list-section table th, #list-section table td {
+    padding: 28px 28px;
+    text-align: center;
+}
+
+#list-section table th {
+    background: linear-gradient(135deg, #cbb5f4, #a17fe0);
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+#list-section table tr:nth-child(even) {
+    background: #f7f0ff;
+}
+
+#list-section table tr:nth-child(odd) {
+    background: #f0f7f7;
+}
+
+#list-section table tr:hover {
+    background: #e6e0f7;
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+#list-section table button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#list-section table button:hover {
+    transform: scale(1.05);
+}
+
+#list-section table button.edit {
+    background: #d3b8f4;
+    color: #4a2c99;
+}
+
+#list-section table button.delete {
+    background: #f7b8b8;
+    color: #990000;
+}
+
+/* Dashboard */
+#dashboard-section {
+    text-align: center;
+    background: #b5dbf7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(161,127,224,0.1);
+}
+
+#dashboard-section span {
+    font-weight: 700;
+    color: #a17fe0;
+    font-size: 1.5rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input {
+        flex: 1 1 100%;
+    }
+
+    /* Botón centrado en móvil */
+    form button {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #list-section table th, #list-section table td {
+        font-size: 0.9rem;
+        padding: 8px 5px;
+    }
+
+    #dashboard-section span {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    form input, form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #list-section table th, #list-section table td {
+        font-size: 0.8rem;
+        padding: 6px 3px;
+    }
+
+    #dashboard-section span {
+        font-size: 1rem;
+    }
+}

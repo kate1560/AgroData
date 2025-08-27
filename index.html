@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Farms</title>
+    <link rel="stylesheet" href="/app/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Farms Dashboard</h1>
+
+        <section id="form-section">
+            <h2>Create / Update / Edit and Delete Farms</h2>
+            <form id="farmsForm">
+                <input type="hidden" id="farm_id">
+                <input type="text" id="farm_name" placeholder="Name" required>
+                <input type="text" id="crop_type" placeholder="Crop Type" required>
+                <input type="text" id="region" placeholder="Region" required>
+                <input type="text" id="responsible_technician" placeholder="Technician" required>
+                <button type="submit">Save Farm</button>
+            </form>
+        </section>
+
+        <section id="list-section">
+            <h2>List of Farms</h2>
+            <table id="FarmsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Farm Name</th>
+                        <th>Crop Type</th>
+                        <th>Region</th>
+                        <th>Responsible Technician</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="dashboard-section">
+            <h2>Dashboard</h2>
+            <p>Total Farms: <span id="totalFarms">0</span></p>
+        </section>
+    </div>
+
+    <script src="/app/js/main.js"></script>
+</body>
+</html>
